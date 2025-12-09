@@ -1,125 +1,105 @@
 # MedVault - Medical Document Portal
 
-A simple full-stack application for managing medical documents (PDFs). Built as part of the INI8 Labs Full Stack Developer Intern assignment.
+A simple full-stack application for managing medical documents (PDFs). Built for the INI8 Labs Full Stack Developer Intern assignment.
 
-![Medical Document Portal](https://via.placeholder.com/800x400/0f172a/0ea5e9?text=MedVault+Portal)
 
-## ✨ Features
+## Features
 
-- **Upload PDF Documents** - Drag & drop or click to upload
-- **View All Documents** - See your uploaded files in a clean list
-- **Download Files** - One-click download for any document
-- **Delete Documents** - Remove files you no longer need
-- **Beautiful Dark UI** - Modern healthcare-themed design
+- Upload PDF documents (drag and drop or click)
+- View all uploaded documents in a list
+- Download any document
+- Delete documents when not needed
 
-## 🛠️ Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | React + Vite |
-| Backend | Node.js + Express |
-| Database | SQLite |
-| File Upload | Multer |
+## Tech Stack
 
-## 📁 Project Structure
+- Frontend -> React + Vite
+- Backend -> Node.js + Express
+- Database -> SQLite
+- File Upload -> Multer
 
-```
-ini8-medical-portal/
-├── backend/
-│   ├── server.js       # Express server & API endpoints
-│   ├── database.js     # SQLite configuration
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── FileUpload.jsx
-│   │   │   ├── DocumentList.jsx
-│   │   │   └── Toast.jsx
-│   │   ├── App.jsx
-│   │   └── index.css
-│   └── package.json
-├── uploads/            # Uploaded PDF files stored here
-├── design.md           # Design document
-└── README.md
-```
 
-## 🚀 Getting Started
+## Project Structure
 
-### Prerequisites
+- backend/ -> Express server and API endpoints
+- frontend/ -> React application with components
+- uploads/ -> Uploaded PDF files stored here
+- design.md -> Design document with architecture and API specs
+- README.md -> This file
 
-- Node.js (v14 or higher)
-- npm
 
-### Installation
+## Getting Started
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/ini8-medical-portal.git
-   cd ini8-medical-portal
+Prerequisites: Node.js (v14+) and npm
+
+1. Clone the repository
+   ```
+   git clone https://github.com/rishavtarway/MedVault.git
+   cd MedVault
    ```
 
-2. **Install backend dependencies**
-   ```bash
+2. Install backend dependencies
+   ```
    cd backend
    npm install
    ```
 
-3. **Install frontend dependencies**
-   ```bash
+3. Install frontend dependencies
+   ```
    cd ../frontend
    npm install
    ```
 
-### Running the Application
 
-1. **Start the backend server** (Terminal 1)
-   ```bash
-   cd backend
-   npm start
-   ```
-   Server runs on: http://localhost:3001
+## Running Locally
 
-2. **Start the frontend** (Terminal 2)
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-   Frontend runs on: http://localhost:5173
+Terminal 1 - Start backend:
+```
+cd backend
+npm start
+```
+Backend runs on http://localhost:3001
 
-3. **Open your browser** and go to http://localhost:5173
+Terminal 2 - Start frontend:
+```
+cd frontend
+npm run dev
+```
+Frontend runs on http://localhost:5173
 
-## 📡 API Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/documents/upload` | POST | Upload a PDF file |
-| `/documents` | GET | List all documents |
-| `/documents/:id` | GET | Download a file |
-| `/documents/:id` | DELETE | Delete a file |
+## API Endpoints
 
-## 📝 Example API Calls
+- POST /documents/upload -> Upload a PDF file
+- GET /documents -> List all documents
+- GET /documents/:id -> Download a file
+- DELETE /documents/:id -> Delete a file
 
-### Upload a file
-```bash
+
+## Example API Calls
+
+Upload a file:
+```
 curl -X POST -F "file=@test.pdf" http://localhost:3001/documents/upload
 ```
 
-### List all documents
-```bash
+List all documents:
+```
 curl http://localhost:3001/documents
 ```
 
-### Download a document
-```bash
+Download a document:
+```
 curl -O http://localhost:3001/documents/1
 ```
 
-### Delete a document
-```bash
+Delete a document:
+```
 curl -X DELETE http://localhost:3001/documents/1
 ```
 
-## 📊 Database Schema
+
+## Database Schema
 
 ```sql
 CREATE TABLE documents (
@@ -131,17 +111,15 @@ CREATE TABLE documents (
 );
 ```
 
-## 🔒 Assumptions
+
+## Assumptions
 
 - Single user (no authentication)
 - PDF files only
 - Max file size: 10MB
 - Local file storage
 
-## 📄 License
+
+## License
 
 This project was created for the INI8 Labs Full Stack Developer Intern assignment.
-
----
-
-Made with ❤️ for INI8 Labs
