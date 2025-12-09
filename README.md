@@ -1,6 +1,8 @@
 # MedVault - Medical Document Portal
 
-A simple full-stack application for managing medical documents (PDFs). Built for the INI8 Labs Full Stack Developer Intern assignment.
+A simple full-stack application for managing medical documents (PDFs).
+
+<img width="1675" height="700" alt="Screenshot 2025-12-09 at 3 43 32 PM" src="https://github.com/user-attachments/assets/12263ab5-7ec1-4ca2-903a-83365243b8b9" />
 
 
 ## Features
@@ -119,7 +121,3 @@ CREATE TABLE documents (
 - Max file size: 10MB
 - Local file storage
 
-
-## License
-
-This project was created for the INI8 Labs Full Stack Developer Intern assignment.
